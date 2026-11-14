@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}NG Digital Tech : solutions numériques à Pointe-Noire.{% endblock %}">
+    <title>{% block title %}NG Digital Tech | Solutions numériques{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+{% set links = [
+    ('home', 'nav_home', 'Accueil'),
+    ('about', 'nav_about', 'À propos'),
+    ('services', 'nav_services', 'Services'),
+    ('projects', 'nav_projects', 'Réalisations'),
+    ('contact', 'nav_contact', 'Contact')
+] %}
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="{{ url_for('home') }}" class="brand">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo NG Digital Tech">
+            <span>NG Digital Tech</span>
+        </a>
+
+        <button type="button" class="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-menu">
+            <nav class="nav-links" aria-label="Navigation principale">
+                {% for endpoint, key, label in links %}
+                <a href="{{ url_for(endpoint) }}" data-i18n="{{ key }}"{% if request.endpoint == endpoint %} class="active" aria-current="page"{% endif %}>{{ label }}</a>
+                {% endfor %}
+            </nav>
+
+            <div class="nav-actions">
+                <div class="lang">
+                    <button type="button" data-lang="fr">FR</button>
+                    <span>|</span>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-sm" data-i18n="hero_button_contact">Demander un devis</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section class="hero{% block hero_class %}{% endblock %}">
+    <img class="hero__img" src="{{ url_for('static', filename=hero_img|default('images/hero.jpg')) }}" alt="">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+        {% block hero %}{% endblock %}
+    </div>
+</section>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div>
+                <h3>NG Digital Tech</h3>
+                <p data-i18n="footer_description">Des solutions numériques au service de vos ambitions.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_navigation">Navigation</h4>
+                {% for endpoint, key, label in links %}
+                <a href="{{ url_for(endpoint) }}" data-i18n="{{ key }}">{{ label }}</a>
+                {% endfor %}
+            </div>
+            <div class="footer-links">
+                <h4>Suivez-nous</h4>
+                <a href="https://www.facebook.com/share/1EnMV298Za/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://wa.me/242064808930?text=Bonjour%20NG%20Digital%20Tech" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NG Digital Tech. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+            <p data-i18n="footer_location">Pointe-Noire, République du Congo</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/extra.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

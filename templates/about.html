@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}À propos | NG Digital Tech{% endblock %}
+{% block description %}Découvrez NG Digital Tech, une activité indépendante spécialisée dans les solutions numériques à Pointe-Noire.{% endblock %}
+
+{% block hero %}
+    <span class="section-label" data-i18n="about_page_label">À propos de NG Digital Tech</span>
+    <h1 data-i18n="about_title">Le numérique, pensé pour vos projets</h1>
+    <p data-i18n="about_page_intro">Découvrez mon activité, ma vision et mon approche de la transformation numérique.</p>
+{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container about-intro">
+        <div>
+            <span class="section-label" data-i18n="about_who_label">Qui suis-je ?</span>
+            <h2 data-i18n="about_who_title">Une activité dédiée aux solutions numériques</h2>
+            <p data-i18n="about_who_p1">NG Digital Tech est une activité indépendante basée à Pointe-Noire, en République du Congo, qui propose des services numériques aux entreprises, commerces, entrepreneurs et organisations.</p>
+            <p data-i18n="about_who_p2">Mon objectif est d'aider les professionnels à développer leur présence en ligne, améliorer leur communication et exploiter les outils numériques pour mieux organiser leurs activités.</p>
+            <p data-i18n="about_who_p3">Les prestations sont réalisées à distance, avec une approche adaptée aux besoins et aux objectifs de chaque projet.</p>
+        </div>
+        <div class="about-panel">
+            <strong>NG Digital Tech</strong>
+            <p data-i18n="about_panel_text">Créativité, technologie et solutions numériques au service des professionnels.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label" data-i18n="vision_label">Ma vision</span>
+            <h2 data-i18n="vision_title">Rendre le numérique utile et accessible</h2>
+            <p data-i18n="vision_intro">Accompagner les professionnels dans leur évolution grâce à des solutions adaptées à leurs réalités.</p>
+        </div>
+        <div class="grid grid-3">
+            <article class="card">
+                <h3 data-i18n="value_one_title">Innovation</h3>
+                <p data-i18n="value_one_text">Explorer les possibilités offertes par les technologies numériques pour répondre aux besoins concrets des activités.</p>
+            </article>
+            <article class="card">
+                <h3 data-i18n="value_two_title">Adaptabilité</h3>
+                <p data-i18n="value_two_text">Proposer des solutions cohérentes avec les objectifs, les moyens et les contraintes de chaque client.</p>
+            </article>
+            <article class="card">
+                <h3 data-i18n="value_three_title">Qualité</h3>
+                <p data-i18n="value_three_text">Accorder de l'importance à la présentation, au fonctionnement et à la fiabilité des solutions proposées.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container prose">
+        <span class="section-label" data-i18n="method_label">Ma méthode</span>
+        <h2 data-i18n="about_method_title">Chaque projet commence par une bonne compréhension du besoin</h2>
+        <p data-i18n="about_method_p1">Avant de proposer une solution, je prends le temps de comprendre les objectifs du client, son activité et les difficultés qu'il souhaite résoudre.</p>
+        <p data-i18n="about_method_p2">Une proposition adaptée est ensuite définie. La réalisation se déroule avec des échanges réguliers et une validation des éléments importants avant la livraison.</p>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2 data-i18n="services.cta_title">Vous avez un projet numérique ?</h2>
+        <p data-i18n="about_cta_text">Échangeons sur vos besoins et les solutions envisageables pour votre activité.</p>
+        <a href="{{ url_for('services') }}" class="btn btn-light" data-i18n="hero_button_services">Découvrir mes services</a>
+    </div>
+</section>
+
+{% endblock %}

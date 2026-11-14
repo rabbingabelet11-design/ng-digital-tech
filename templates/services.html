@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% set hero_img = 'images/services.jpg' %}
+
+{% block title %}NG Digital Tech | Services{% endblock %}
+{% block description %}Découvrez les services numériques de NG Digital Tech : création de sites web, solutions digitales, chatbots, community management, montage vidéo et design graphique.{% endblock %}
+
+{% block hero %}
+    <span class="section-label" data-i18n="services.page_label">Nos expertises</span>
+    <h1 data-i18n="services.page_title">Des services numériques pour développer votre activité</h1>
+    <p data-i18n="services.page_intro">NG Digital Tech propose des solutions adaptées aux entreprises, aux commerces, aux marques et aux entrepreneurs.</p>
+{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Floute la bannière Services pour que son texte intégré ne gêne pas le titre */
+    .hero__img { filter: blur(5px) brightness(0.6); transform: scale(1.06); }
+</style>
+
+<section class="section">
+    <div class="container grid grid-3">
+        <article class="card">
+            <div class="icon" aria-hidden="true">💻</div>
+            <h3 data-i18n="services.web_title">Création de sites web</h3>
+            <p data-i18n="services.web_description">Conception de sites vitrines modernes, professionnels, responsives et adaptés à votre identité. Présentez vos activités, vos produits et vos services sur Internet.</p>
+        </article>
+        <article class="card">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3 data-i18n="services.digital_title">Solutions digitales</h3>
+            <p data-i18n="services.digital_description">Conception d'outils numériques, de tableaux de bord et de solutions de gestion pour améliorer l'organisation et le suivi de vos activités.</p>
+        </article>
+        <article class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3 data-i18n="services.chatbot_title">Chatbots et assistants intelligents</h3>
+            <p data-i18n="services.chatbot_description">Création d'assistants conversationnels pour répondre aux questions fréquentes, orienter les clients et faciliter les échanges avec votre entreprise.</p>
+        </article>
+        <article class="card">
+            <div class="icon" aria-hidden="true">📱</div>
+            <h3 data-i18n="services.community_title">Community management</h3>
+            <p data-i18n="services.community_description">Gestion de vos réseaux sociaux, préparation des publications, organisation du calendrier éditorial et développement de votre présence en ligne.</p>
+        </article>
+        <article class="card">
+            <div class="icon" aria-hidden="true">🎬</div>
+            <h3 data-i18n="services.video_title">Montage vidéo</h3>
+            <p data-i18n="services.video_description">Montage de vidéos promotionnelles, publicitaires et professionnelles pour présenter vos activités et communiquer efficacement sur les réseaux sociaux.</p>
+        </article>
+        <article class="card">
+            <div class="icon" aria-hidden="true">🎨</div>
+            <h3 data-i18n="services.design_title">Design graphique</h3>
+            <p data-i18n="services.design_description">Création de logos, affiches, flyers, visuels publicitaires et supports graphiques cohérents avec l'identité de votre marque.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section section--alt">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label" data-i18n="method_label">Ma méthode</span>
+            <h2 data-i18n="services.approach_title">Une méthode adaptée à chaque projet</h2>
+            <p data-i18n="services.approach_description">Chaque prestation commence par l'analyse de vos besoins. La solution est ensuite définie, réalisée et vérifiée avant sa livraison.</p>
+        </div>
+        <div class="grid grid-3">
+            <article class="card">
+                <span class="step">1</span>
+                <h3 data-i18n="services.step_one">Écoute et analyse</h3>
+                <p data-i18n="services.step_one_text">Comprendre votre activité, vos objectifs et vos attentes.</p>
+            </article>
+            <article class="card">
+                <span class="step">2</span>
+                <h3 data-i18n="services.step_two">Conception</h3>
+                <p data-i18n="services.step_two_text">Définir une solution cohérente avec votre besoin et votre budget.</p>
+            </article>
+            <article class="card">
+                <span class="step">3</span>
+                <h3 data-i18n="services.step_three">Réalisation</h3>
+                <p data-i18n="services.step_three_text">Développer la solution, effectuer les vérifications et préparer la livraison.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2 data-i18n="services.cta_title">Vous avez un projet numérique ?</h2>
+        <p data-i18n="services.cta_description">Présentez votre besoin afin d'étudier la solution la plus adaptée à votre activité.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light" data-i18n="services.cta_button">Discuter de votre projet</a>
+    </div>
+</section>
+
+{% endblock %}

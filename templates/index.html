@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}NG Digital Tech | Solutions numériques{% endblock %}
+{% block description %}NG Digital Tech propose des services de création de sites web, chatbots, community management, montage vidéo et design graphique à Pointe-Noire.{% endblock %}
+{% block hero_class %} hero--home{% endblock %}
+
+{% block hero %}
+    <span class="hero-label" data-i18n="hero_label">Innovation numérique</span>
+    <h1 data-i18n="hero_title">Le numérique au service de vos ambitions</h1>
+    <p data-i18n="hero_description">Je conçois des solutions numériques modernes pour aider les entreprises, les entrepreneurs et les organisations à développer leurs activités.</p>
+    <div class="hero-actions">
+        <a href="{{ url_for('services') }}" class="btn btn-primary" data-i18n="hero_button_services">Découvrir mes services</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline" data-i18n="hero_button_contact">Demander un devis</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<section class="section" id="apropos">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label" data-i18n="about_label">À propos</span>
+            <h2 data-i18n="about_title">Le numérique, pensé pour vos projets</h2>
+            <p data-i18n="about_intro">NG Digital Tech est une activité indépendante dédiée à la conception de solutions numériques adaptées aux besoins des professionnels.</p>
+        </div>
+        <div class="prose">
+            <h3 data-i18n="about_subtitle">Transformer vos idées en solutions concrètes</h3>
+            <p data-i18n="about_description">Basé à Pointe-Noire, au Congo, je propose des services numériques accessibles à distance. Mon objectif est de mettre la technologie au service du développement et de la performance des activités.</p>
+            <a href="{{ url_for('about') }}" class="btn btn-primary" data-i18n="about_button">En savoir plus</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt" id="services">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label" data-i18n="services_label">Mes services</span>
+            <h2 data-i18n="services_title">Des solutions numériques adaptées à vos besoins</h2>
+            <p data-i18n="services_intro">Des prestations conçues pour accompagner les entreprises, les commerces et les entrepreneurs.</p>
+        </div>
+
+        <div class="grid grid-3">
+            <article class="card">
+                <div class="icon" aria-hidden="true">💻</div>
+                <h3 data-i18n="service_web_title">Création de sites web</h3>
+                <p data-i18n="service_web_description">Des sites web modernes, professionnels et adaptés aux appareils mobiles.</p>
+            </article>
+            <article class="card">
+                <div class="icon" aria-hidden="true">📊</div>
+                <h3 data-i18n="service_digital_title">Solutions digitales</h3>
+                <p data-i18n="service_digital_description">Des outils numériques et tableaux de bord pour améliorer votre organisation.</p>
+            </article>
+            <article class="card">
+                <div class="icon" aria-hidden="true">📱</div>
+                <h3 data-i18n="service_community_title">Community management</h3>
+                <p data-i18n="service_community_description">Gestion des réseaux sociaux et accompagnement de votre présence en ligne.</p>
+            </article>
+            <article class="card">
+                <div class="icon" aria-hidden="true">🤖</div>
+                <h3 data-i18n="service_automation_title">Automatisation et chatbots</h3>
+                <p data-i18n="service_automation_description">Des solutions pour automatiser certaines tâches et faciliter les échanges avec les clients.</p>
+            </article>
+            <article class="card">
+                <div class="icon" aria-hidden="true">🎬</div>
+                <h3 data-i18n="service_consulting_title">Design graphique et montage vidéo</h3>
+                <p data-i18n="service_consulting_description">Création de logos, supports visuels et montage de vidéos pour les marques et entreprises.</p>
+            </article>
+        </div>
+
+        <div class="section-action">
+            <a href="{{ url_for('services') }}" class="btn btn-primary" data-i18n="services_button">Voir tous les services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="methode">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label" data-i18n="method_label">Ma méthode</span>
+            <h2 data-i18n="method_title">Une approche simple et structurée</h2>
+            <p data-i18n="method_intro">Chaque projet suit une démarche claire, de la compréhension du besoin jusqu'à la livraison.</p>
+        </div>
+
+        <div class="grid grid-3">
+            <article class="card">
+                <span class="step">1</span>
+                <h3 data-i18n="method_step_one">Comprendre</h3>
+                <p data-i18n="method_step_one_text">Identifier vos besoins, vos objectifs et les contraintes du projet.</p>
+            </article>
+            <article class="card">
+                <span class="step">2</span>
+                <h3 data-i18n="method_step_two">Concevoir</h3>
+                <p data-i18n="method_step_two_text">Définir une solution adaptée et préparer sa réalisation.</p>
+            </article>
+            <article class="card">
+                <span class="step">3</span>
+                <h3 data-i18n="method_step_three">Réaliser</h3>
+                <p data-i18n="method_step_three_text">Développer, tester et livrer une solution conforme aux attentes validées.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <div class="container">
+        <h2 data-i18n="contact_title">Parlons de votre projet</h2>
+        <p data-i18n="contact_intro">Vous avez une idée ou un besoin numérique ? Présentez votre projet pour étudier les solutions possibles.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light" data-i18n="contact_button">Me contacter</a>
+    </div>
+</section>
+
+{% endblock %}

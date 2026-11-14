@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% set hero_img = 'images/realisations.jpg' %}
+
+{% block title %}NG Digital Tech | Réalisations{% endblock %}
+{% block description %}Découvrez les domaines de compétence de NG Digital Tech : sites web, chatbots, community management, montage vidéo et design graphique.{% endblock %}
+
+{% block hero %}
+    <span class="section-label" data-i18n="projects.page_label">Nos domaines d'intervention</span>
+    <h1 data-i18n="projects.page_title">Des solutions créatives et numériques</h1>
+    <p data-i18n="projects.page_intro">Découvrez les différents domaines dans lesquels NG Digital Tech propose ses compétences et ses prestations.</p>
+{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Photos des cartes : ce bloc suffit, même si style.css n'est pas à jour */
+    .card__visual { position: relative; display: block; height: 190px; overflow: hidden; background: #142D4E; font-size: inherit; }
+    .card__visual img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card__visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8, 24, 46, 0.55), rgba(8, 24, 46, 0) 60%); }
+    .card__visual .chip { position: absolute; z-index: 2; left: 20px; bottom: 16px; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: rgba(255, 255, 255, 0.94); font-size: 24px; }
+    @media (max-width: 600px) { .card__visual { height: 170px; } }
+</style>
+
+<section class="section">
+    <div class="container">
+
+        <div class="grid grid-3">
+            <article class="card card--media">
+                <div class="card__visual" aria-hidden="true"><img src="{{ url_for('static', filename='images/projects/web.jpg') }}" alt="" loading="lazy"><span class="chip">💻</span></div>
+                <div class="card__body">
+                    <h3 data-i18n="projects.website_title">Création de sites web professionnels</h3>
+                    <p data-i18n="projects.website_description">Conception de sites vitrines modernes et adaptés aux mobiles pour présenter une entreprise, ses activités, ses services et faciliter la prise de contact avec ses clients.</p>
+                    <span class="badge" data-i18n="projects.status">Domaine de compétence</span>
+                </div>
+            </article>
+            <article class="card card--media">
+                <div class="card__visual" aria-hidden="true"><img src="{{ url_for('static', filename='images/projects/chatbot.jpg') }}" alt="" loading="lazy"><span class="chip">🤖</span></div>
+                <div class="card__body">
+                    <h3 data-i18n="projects.assistant_title">Chatbots et assistants intelligents</h3>
+                    <p data-i18n="projects.assistant_description">Création d'assistants conversationnels capables de répondre aux questions des clients, de présenter les services d'une entreprise et de faciliter les échanges avec les utilisateurs.</p>
+                    <span class="badge" data-i18n="projects.status">Domaine de compétence</span>
+                </div>
+            </article>
+            <article class="card card--media">
+                <div class="card__visual" aria-hidden="true"><img src="{{ url_for('static', filename='images/projects/social.jpg') }}" alt="" loading="lazy"><span class="chip">📱</span></div>
+                <div class="card__body">
+                    <h3 data-i18n="projects.communication_title">Community management et réseaux sociaux</h3>
+                    <p data-i18n="projects.communication_description">Gestion des pages professionnelles, organisation des publications, planification des contenus et accompagnement des entreprises dans le développement de leur présence sur les réseaux sociaux.</p>
+                    <span class="badge" data-i18n="projects.status">Domaine de compétence</span>
+                </div>
+            </article>
+            <article class="card card--media">
+                <div class="card__visual" aria-hidden="true"><img src="{{ url_for('static', filename='images/projects/video.jpg') }}" alt="" loading="lazy"><span class="chip">🎬</span></div>
+                <div class="card__body">
+                    <h3 data-i18n="projects.video_title">Montage vidéo</h3>
+                    <p data-i18n="projects.video_description">Montage de vidéos promotionnelles, publicitaires et professionnelles pour les entreprises, les marques et les réseaux sociaux.</p>
+                    <span class="badge" data-i18n="projects.status">Domaine de compétence</span>
+                </div>
+            </article>
+            <article class="card card--media">
+                <div class="card__visual" aria-hidden="true"><img src="{{ url_for('static', filename='images/projects/design.jpg') }}" alt="" loading="lazy"><span class="chip">🎨</span></div>
+                <div class="card__body">
+                    <h3 data-i18n="projects.design_title">Création de logos et design graphique</h3>
+                    <p data-i18n="projects.design_description">Création de logos, identités visuelles, affiches, flyers et supports graphiques pour les entreprises, les produits et les marques.</p>
+                    <span class="badge" data-i18n="projects.status">Domaine de compétence</span>
+                </div>
+            </article>
+        </div>
+
+        <p class="notice" data-i18n="projects.notice">Les éléments présentés décrivent les domaines de compétence et les prestations proposées par NG Digital Tech. Ils ne constituent pas nécessairement des projets déjà réalisés pour des clients.</p>
+
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2 data-i18n="projects.cta_title">Vous souhaitez concrétiser une idée ?</h2>
+        <p data-i18n="projects.cta_description">Échangeons sur votre besoin et les possibilités de réalisation.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light" data-i18n="projects.cta_button">Nous contacter</a>
+    </div>
+</section>
+
+{% endblock %}

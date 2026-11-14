@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{# >>> COLLE ICI LE LIEN DE TA PAGE FACEBOOK (entre les guillemets) <<< #}
+{% set facebook_url = 'https://www.facebook.com/share/1EnMV298Za/?mibextid=wwXIfr' %}
+
+{% block title %}NG Digital Tech | Contact{% endblock %}
+{% block description %}Contactez NG Digital Tech à Pointe-Noire par WhatsApp ou Facebook pour votre projet numérique.{% endblock %}
+
+{% block hero %}
+    <span class="section-label" data-i18n="contact_label">Contact</span>
+    <h1 data-i18n="contact_title">Parlons de votre projet</h1>
+    <p data-i18n="contact_intro">Vous avez une idée ou un besoin numérique ? Présentez votre projet pour étudier les solutions possibles.</p>
+{% endblock %}
+
+{% block content %}
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ic-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="ic-fb" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+</svg>
+
+
+<section class="section">
+    <div class="container">
+
+        <div class="grid grid-3">
+
+            <article class="card card--brand card--wa">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ic-wa"/></svg>
+                <div class="icon icon--wa" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#ic-wa"/></svg></div>
+                <h3>WhatsApp</h3>
+                <p data-i18n="ct_whatsapp_text">Le moyen le plus rapide : décrivez votre besoin par message.</p>
+                <a class="btn btn-wa"
+                   href="https://wa.me/242064808930?text=Bonjour%20NG%20Digital%20Tech%2C%20j%27ai%20un%20projet%20num%C3%A9rique."
+                   target="_blank" rel="noopener" data-i18n="ct_whatsapp_btn">Écrire sur WhatsApp</a>
+            </article>
+
+            <article class="card card--brand card--fb">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ic-fb"/></svg>
+                <div class="icon icon--fb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#ic-fb"/></svg></div>
+                <h3>Facebook</h3>
+                <p data-i18n="ct_fb_text">Suivez nos actualités et envoyez-nous un message sur notre page.</p>
+                <a class="btn btn-fb" href="{{ facebook_url }}" target="_blank" rel="noopener" data-i18n="ct_fb_btn">Voir la page Facebook</a>
+            </article>
+
+            <article class="card card--map">
+                <a class="map-photo" href="https://www.openstreetmap.org/?mlat=-4.7761&amp;mlon=11.8635#map=13/-4.7761/11.8635" target="_blank" rel="noopener" aria-label="Voir Pointe-Noire sur la carte">
+                    <img src="{{ url_for('static', filename='images/location.jpg') }}" alt="Pointe-Noire, République du Congo">
+                </a>
+                <div class="card__body">
+                    <h3 data-i18n="ct_place_title">Localisation</h3>
+                    <p data-i18n="footer_location">Pointe-Noire, République du Congo</p>
+                    <p data-i18n="ct_place_text">Les prestations sont réalisées à distance.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="notice" data-i18n="ct_tip">Pour recevoir un devis rapidement, indiquez votre activité, le service souhaité et le délai voulu.</p>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    Object.assign(translations.fr, {
+        ct_whatsapp_text: "Le moyen le plus rapide : décrivez votre besoin par message.",
+        ct_whatsapp_btn: "Écrire sur WhatsApp",
+        ct_fb_text: "Suivez nos actualités et envoyez-nous un message sur notre page.",
+        ct_fb_btn: "Voir la page Facebook",
+        ct_place_title: "Localisation",
+        ct_place_text: "Les prestations sont réalisées à distance.",
+        ct_tip: "Pour recevoir un devis rapidement, indiquez votre activité, le service souhaité et le délai voulu."
+    });
+    Object.assign(translations.en, {
+        ct_whatsapp_text: "The fastest way: describe your need in a message.",
+        ct_whatsapp_btn: "Write on WhatsApp",
+        ct_fb_text: "Follow our news and send us a message on our page.",
+        ct_fb_btn: "View the Facebook page",
+        ct_place_title: "Location",
+        ct_place_text: "Services are delivered remotely.",
+        ct_tip: "To get a quote quickly, tell us about your business, the service you need and your deadline."
+    });
+</script>
+{% endblock %}

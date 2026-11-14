@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Page introuvable | NG Digital Tech{% endblock %}
+
+{% block hero %}
+    <h1>Page introuvable</h1>
+    <p>La page demandée n'existe pas ou a été déplacée.</p>
+    <div class="hero-actions">
+        <a href="{{ url_for('home') }}" class="btn btn-primary">Retour à l'accueil</a>
+    </div>
+{% endblock %}
+
+{% block content %}{% endblock %}
